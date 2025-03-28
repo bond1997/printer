@@ -72,6 +72,32 @@
       margin-top: 2rem;
     }
 
+    /* Call Us Popup center */
+    .call-us-popup-center{
+      background: #007BFF;
+      color: white;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      margin: 1rem auto;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 1000;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .call-us-popup-center:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .call-us-popup-center i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+
     /* Call Us Popup */
     .call-us-popup {
       position: fixed;
@@ -200,6 +226,11 @@ s0.parentNode.insertBefore(s1,s0);
       </div>
     </div>
   </section>
+
+  <div class="call-us-popup-center" onclick="window.location.href='tel:18773379212';">
+    <i class="fas fa-phone"></i>
+    <span>Get Instant Help: 1-8773379212</span>
+  </div>
 
   <footer>
     <p>© 2025 Hassle-Free Printer Solutions. All rights reserved.</p>
