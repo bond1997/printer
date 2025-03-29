@@ -1,0 +1,306 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer Solutions - Hassle-Free Printer Setup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            padding: 0.4rem 0;
+        }
+
+        .hero-bg {
+            width: 100%;
+        }
+
+        section {
+            padding: 2rem 1rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #007BFF;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .faqs {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        /* Call Us Popup center */
+        .call-us-popup-center {
+            max-width: 450px;
+            background: #007BFF;
+            color: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 25px;
+            margin: 1rem auto;
+            font-size: 1.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .call-us-popup-center:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-us-popup-center i {
+            font-size: 1.7rem;
+            margin-right: 10px;
+        }
+
+        /* Call Us Popup */
+        .call-us-popup {
+            position: fixed;
+            bottom: 20px;
+            Left: 20px;
+            background: #007BFF;
+            color: white;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .call-us-popup:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-us-popup i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 4rem auto 12rem auto;
+            border-radius: 10px;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #929292;
+            max-width: 950px;
+            font-weight: bold;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            width: 47%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contact-form h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2b3264;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 60%;
+            padding: 12px;
+            background: #2b3264;
+            color: white;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #1d214f;
+        }
+
+        /* Map Styling */
+        .map-container {
+            width: 47%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-form {
+                width: 100%;
+                order: 1;
+            }
+
+            .map-container {
+                width: 100%;
+                order: 2;
+                margin-top: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/67df0414ae569c190e1933b9/1imvifs7t';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <header style="background-color: #1E90FF;">
+        <nav>
+            <ul
+                style="list-style: none; color: #fff; display: flex; align-items: center; justify-content: space-between;">
+                <li style="display: flex; align-items: center; justify-content: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                    </svg>
+                    <a href="tel:+18773379212"
+                        style="text-decoration: none; color: #fff; font-size: 2rem; font-weight: 700; margin-left: 10px;">(877)
+                        337-9212</a>
+                </li>
+                <li>
+                    <a href="./contact.html"
+                        style="text-decoration: none; color: #fff; font-size: 1rem; font-weight: 700; margin-right: 10px;">Contact
+                        Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="container contact">
+        <h2 class="title">Contact Us – Reach Out, Let’s Connect!</h2>
+        <p>Have questions, need assistance, or want to collaborate? We're here to help! Whether you’re seeking expert
+            guidance, business inquiries, or customer support, our team is ready to assist you. Reach out to us for
+            seamless communication, quick responses, and tailored solutions—because your queries matter to us!</p>
+        <div class="contact-section">
+            <div class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Concern / Inquiry"></textarea>
+                <button type="submit">Get in Touch with US</button>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345086196!2d144.95592831590493!3d-37.81720974202139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5777c2d5c98041a!2sMelbourne%2C%20Australia!5e0!3m2!1sen!2sus!4v1612504984981"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <iframe id="tidio-chat-code" title="Tidio Chat code" style="display: none;"></iframe>
+    <div id="tidio-chat" style="position: fixed; z-index: 999999999 !important;"></div>
+</body>
+
+</html>
